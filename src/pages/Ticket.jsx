@@ -104,7 +104,10 @@ function Ticket() {
           <p><strong>Consulting Doctor:</strong> {generatedTicket.doctorName}</p>
           <p><strong>Consultation Fee:</strong> ${generatedTicket.fee}</p>
           
-          <button style={{ marginTop: '20px' }} onClick={() => setGeneratedTicket(null)}>Book Another Ticket</button>
+          <div style={{ marginTop: '20px' }}>
+            <button onClick={() => setGeneratedTicket(null)}>Book Another Ticket</button>
+            <button onClick={() => window.print()} style={{ marginLeft: '10px', backgroundColor: '#555' }}>Print Ticket</button>
+          </div>
         </div>
       )}
     </div>

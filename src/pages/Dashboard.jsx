@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 function Dashboard() {
   const [patientCount, setPatientCount] = useState(0);
   const [ticketCount, setTicketCount] = useState(0);
+  const [patientsList, setPatientsList] = useState([]);
 
   useEffect(() => {
     const patients = JSON.parse(localStorage.getItem('patients') || '[]');
     const tickets = JSON.parse(localStorage.getItem('tickets') || '[]');
     setPatientCount(patients.length);
     setTicketCount(tickets.length);
+    setPatientsList(patients);
   }, []);
 
   return (
@@ -26,6 +28,21 @@ function Dashboard() {
           <h3>Total OP Tickets Today</h3>
           <p style={{ fontSize: '24px', fontWeight: 'bold' }}>{ticketCount}</p>
         </div>
+      </div>
+
+      <div style={{ marginTop: '20px' }}>
+        <h3>Recent Registrations</h3>
+        {patientsList.length === 0 ? (
+          <p>No recent activity.</p>
+        ) : (
+          <ul style={{ listStyleType: 'none', padding: 0 }}>
+            {patientsList.slice(-3).reverse().map(p => (
+              <li key={p.id} style={{ padding: '10px', borderBottom: '1px solid #ddd' }}>
+                <strong>{p.name}</strong> registered. (Blood Group: {p.bloodGroup})
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       <div style={{ marginTop: '20px' }}>

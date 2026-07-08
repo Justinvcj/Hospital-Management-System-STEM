@@ -7,9 +7,11 @@ function Navbar() {
       <nav>
         <Link to="/">Dashboard</Link>
         <Link to="/register">Register Patient</Link>
+        <Link to="/patients">Patients List</Link>
         <Link to="/departments">Departments</Link>
         <Link to="/doctors">Doctors</Link>
         <Link to="/ticket">Book Ticket</Link>
+        <Link to="/manage-tickets">Manage Tickets</Link>
       </nav>
     </header>
   );

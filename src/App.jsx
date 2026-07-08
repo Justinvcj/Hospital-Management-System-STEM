@@ -5,6 +5,8 @@ import Registration from './pages/Registration';
 import Departments from './pages/Departments';
 import Doctors from './pages/Doctors';
 import Ticket from './pages/Ticket';
+import Patients from './pages/Patients';
+import ManageTickets from './pages/ManageTickets';
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/register" element={<Registration />} />
+          <Route path="/patients" element={<Patients />} />
           <Route path="/departments" element={<Departments />} />
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/ticket" element={<Ticket />} />
+          <Route path="/manage-tickets" element={<ManageTickets />} />
         </Routes>
       </div>
     </Router>
