@@ -32,4 +32,5 @@ This is a simple Hospital Management System developed as a first-year project. T
 
 ## Notes
 
-This version uses Local Storage, so if you clear your browser cache, the registered patients and tickets will be reset.
+- **Project Restoration:** This project was originally completed in March 2024. The original repository and source files were temporarily lost and recently recovered. As a result, while the commit history reflects the actual date the work was completed (March 2024), this GitHub repository itself was newly created today to host the recovered project.
+- **Data Storage:** This version uses Local Storage, so if you clear your browser cache, the registered patients and tickets will be reset.
